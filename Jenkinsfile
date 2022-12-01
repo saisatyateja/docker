@@ -2,13 +2,13 @@ pipeline{
     agent{node "ubuntu"}
     stages{
         stage('vcs'){
-            step{
+            steps{
                 git branch:"main",
                      url: "https://github.com/saisatyateja/docker.git"
             }
         }
         stage('execute'){
-            step{
+            steps{
                 sh "sh dockerinfo.sh"
             }
         }

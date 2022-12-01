@@ -1,6 +1,6 @@
 pipeline{
    parameters { choice(name: 'choose_a_node', choices: ['ubuntu', 'centos', 'redhat'], description: 'on what node should i have to run it') }
-     agent(node "${params.choose_a_node}")
+     agent(node ""${params.choose_a_node}"")
     stages{
        
         stage('vcs'){

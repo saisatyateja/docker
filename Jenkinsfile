@@ -9,7 +9,7 @@ pipeline{
         }
         stage('execute'){
             steps{
-                sh "sh dockerinfo.sh"
+                sh "sh dockinfo.sh"
             }
         }
     }
